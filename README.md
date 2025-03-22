@@ -1,17 +1,16 @@
 # Virtual Me Training
 
-This repo provides data that is used to populate a Pinecone vector database. The results from querying the Pinecone
-index can then be used as text embeddings in the OpenAI powered chat on https://johneast.dev
+This repository provides data used to populate a Pinecone vector database. The results from querying the Pinecone index can be utilized as text embeddings in the OpenAI-powered chat on https://johneast.dev.
 
-## Getting started
+## Getting Started
 
-Install the dependencies through npm
+Install the dependencies using npm:
 
 ```
 npm install
 ```
 
-Once the dependencies are installed, run the build
+After installing the dependencies, execute the build:
 
 ```
 npm run build
@@ -19,7 +18,7 @@ npm run build
 
 ## API Keys
 
-The necessary API keys are provided through the environment. The environment variables required are:
+The required API keys are supplied through environment variables. The necessary environment variables are:
 
 ```
 PINECONE_API_KEY
@@ -27,9 +26,9 @@ OPENAI_API_KEY
 PINECONE_INDEX
 ```
 
-## Data format
+## Data Format
 
-The data used to create embeddings and is provided in the `data` folder (not included in this repo) in markdown files. The data is arranged by sub-headings. So when uploading, the files are split on `## ` (markdown heading 2), converted to an openAI text embedding and uploaded to the pinecone index. An example of a file might look like this:
+The data used to create embeddings is located in the `data` folder (not included in this repository) in markdown files. The data is organized by sub-headings. When uploading, the files are split at `## ` (markdown heading 2), converted to an OpenAI text embedding, and uploaded to the Pinecone index. An example file might look like this:
 
 ```
 ## Who are you?
@@ -40,11 +39,11 @@ During the winter I enjoy snowboarding. My partner (who is an avid skier) and I 
 During the summer I enjoy playing tennis. I'm not very good but I do enjoy it.
 ```
 
-All markdown files are found in the `data` folder so multiple files can be used to provide logical groupings of information.
+All markdown files are stored in the `data` folder, enabling multiple files to provide logical groupings of information.
 
 ## Uploading
 
-Once the files are ready, they can be uploaded to Pinecone using the command
+Once the files are prepared, they can be uploaded to Pinecone using the command:
 
 ```
 npm run upload
@@ -52,7 +51,7 @@ npm run upload
 
 ## Chat testing
 
-Once uploaded the chat can be tested using the cli chat interface. To run that, use the command
+After uploading, the chat can be tested using the CLI chat interface. To run it, use the command:
 
 ```
 npm run chat
